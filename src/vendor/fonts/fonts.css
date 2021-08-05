@@ -6,6 +6,7 @@
     font-weight: 500;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'Inter';
     src: url('inter-black/Inter-Black.eot');
@@ -14,6 +15,7 @@
     font-weight: 900;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'Inter';
     src: url('inter-regular/Inter-Regular.otf') format('otf');
@@ -22,4 +24,29 @@
     src: url('inter-regular/Inter-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+}
+
+@font-face {
+    font-family: 'Suisse_int';
+    src: url('Suisse-Intl-regular/suisseintl-regular-webfont.woff2') format('woff2'),
+    url('Suisse-Intl-regular/suisseintl-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Suisse_int';
+    src: url('Suisse-Intl-black/suisseintl-black-webfont.woff2') format('woff2'),
+    url('Suisse-Intl-black/suisseintl-black-webfont.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Suisse_int';
+    src: url('Suisse-Intl-medium/suisseintl-medium-webfont.woff2') format('woff2'),
+    url('Suisse-Intl-medium/suisseintl-medium-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+
 }

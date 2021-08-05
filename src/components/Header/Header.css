@@ -1,6 +1,5 @@
 @import url(../../vendor/fonts/fonts.css);
 .header{
-    border: red 1px solid;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -34,10 +33,11 @@
     text-decoration: none;
     cursor: pointer;
     background-color: #fff;
+    transition-duration: .5s;
+    font-style: normal;
     font-weight: 500;
     font-size: 12px;
     line-height: 16px;
-    transition-duration: .5s;
 }
 .header__signIn{
     width: 76px;
@@ -45,11 +45,19 @@
     border: none;
     background-color: #3456F3;
     border-radius: 3px;
+    font-family: 'Inter', Arial sans-serif;
+    font-weight: 500;
     font-size: 12px;
     line-height: 16px;
+    font-style: normal;
     color: #fff;
     margin-left: 30px;
     cursor: pointer;
     transition-duration: .5s;
 }
 
+@media screen and (max-width: 768px) {
+    .header__main {
+        margin: 18px 30px;
+    }
+}

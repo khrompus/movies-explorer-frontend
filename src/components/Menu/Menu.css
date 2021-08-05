@@ -1,0 +1,131 @@
+.menu {
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    /*transform: translateX(100%);*/
+    transition: .4s;
+    display: none;
+}
+
+.menu_active {
+    display: block;
+    /*transform: translateX(0);*/
+}
+
+.menu__container {
+    top: 0;
+    right: 0;
+    z-index: 1;
+    position: fixed;
+    background-color: #FFFFFF;
+    height: 100vh;
+    width: 476px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 22px;
+    margin: 0;
+}
+
+.menu__exit {
+    width: 22px;
+    height: 22px;
+    align-self: flex-end;
+    cursor: pointer;
+    border: none;
+    background-color: #fff;
+    transition: .5s;
+}
+
+.menu__exit:hover {
+    opacity: .5;
+}
+
+.menu__exit-icon {
+    width: 22px;
+    height: 22px;
+}
+
+.menu__content {
+    margin: 105px 0 0 0;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding: 0;
+}
+
+.menu__link {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    border: none;
+    background-color: #fff;
+    text-decoration: none;
+    margin: 28px 0 0 0;
+    /*cursor: pointer;*/
+    transition: .5s;
+    color: black;
+    padding-bottom: 4px;
+}
+
+.menu__link:hover {
+    opacity: .5;
+}
+
+.menu__link_margin-zero {
+    margin: 0;
+}
+
+.menu__link_margin {
+    /*margin: 585px 0 0 0;*/
+    padding: 0;
+    display: flex;
+    align-items: center;
+    height: 30px;
+}
+
+.menu__profile-icon {
+    padding: 8px 7px;
+    background: #F4F4F4;
+    border-radius: 4px;
+}
+
+.menu__link-profile {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    border: none;
+    text-decoration: none;
+    padding: 0;
+    margin: 0 17px 0 0;
+    transition: .5s;
+    color: black;
+
+}
+
+.menu__link-active {
+    border-bottom: 2px solid black;
+}
+
+.menu__link-button {
+    border: none;
+    text-decoration: none;
+    background-color: #fff;
+    display: flex;
+    flex-flow: row nowrap;
+    /*justify-content: center;*/
+    align-items: center;
+    margin: 550px 0 0 0;
+    padding:0 0 4px 0;
+
+}
