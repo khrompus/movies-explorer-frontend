@@ -3,6 +3,7 @@
     margin: 0;
     display: flex;
     flex-direction: column;
+    background-color: #fff;
 }
 
 .register__image {
@@ -60,12 +61,14 @@
     background-color: #F4F4F4;
     border-right: 8px;
     padding: 15px;
-    width: 100%;
+    max-width: 396px;
     border: none;
     outline: none;
+    border-radius: 8px;
 }
 
 .register__submit {
+    padding: 0;
     margin: 91px 0 0 0;
     width: 100%;
     height: 45px;
@@ -112,4 +115,23 @@
 
 .register__sign-in:hover {
     opacity: .5;
+}
+
+@media screen and (max-width: 768px) {
+    .register {
+        padding: 181px 186px;
+    }
+}
+@media screen and (max-width: 320px) {
+    .register {
+        padding: 56px 30px;
+    }
+    .register__title {
+        font-size: 24px;
+        line-height: 29px;
+        align-self: center;
+    }
+    .register__container-image {
+        align-self: center;
+    }
 }

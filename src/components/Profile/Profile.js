@@ -11,13 +11,13 @@ function Profile() {
                 <label className='profile__label'>
                     Имя
                 </label>
-                <input className='profile__input' id='profileName' type='name' name='profile-name' placeholder='Имя' value='Владислав'/>
+                <input className='profile__input' id='profileName' type='name' name='profile-name' placeholder='Здесь будет имя пользователя'/>
             </div>
             <div className='profile__label-container profile__label-container_margin'>
                 <label className='profile__label'>
                     Почта
                 </label>
-                <input className='profile__input' id='profileEmail' type='email' name='profile-email' placeholder='Почта' value='pochta@yandex.ru'/>
+                <input className='profile__input' id='profileEmail' type='email' name='profile-email' placeholder='Здесь будет почта пользователя'/>
             </div>
         </form>
         <button className='profile__button'>Редактировать</button>

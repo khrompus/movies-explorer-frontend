@@ -31,18 +31,19 @@ function App() {
 
     return (
         <div className="App">
-            <Route path='/signup'>
-                <Register/>
-            </Route>
-            <Route path='/signin'>
-                <Login/>
-            </Route>
             <Switch>
                 <Route exact path='/'>
                     <Header isMenuOpen={isMenuOpen} handleCloseMenu={handleCloseMenu} handleOpenMenu={handleOpenMenu}
                             isLoggedIn={isLoggedIn}/>
                     <Main/>
                     <Footer/>
+                </Route>
+
+                <Route path='/signup'>
+                    <Register/>
+                </Route>
+                <Route path='/signin'>
+                    <Login/>
                 </Route>
 
                 <Route exact path='/movies'>

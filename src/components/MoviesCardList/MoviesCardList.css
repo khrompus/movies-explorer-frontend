@@ -4,3 +4,19 @@
     gap: 30px 24px;
     justify-content: center;
 }
+
+@media screen and (max-width: 768px) {
+    .card-list {
+        grid-template-columns: repeat(auto-fit, minmax(min-content, 339px));
+        gap: 36px 30px;
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .card-list {
+        grid-template-columns: repeat(auto-fit, minmax(min-content, 300px));
+        justify-content: center;
+        row-gap: 16px;
+    }
+}

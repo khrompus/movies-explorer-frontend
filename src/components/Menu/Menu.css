@@ -123,9 +123,25 @@
     background-color: #fff;
     display: flex;
     flex-flow: row nowrap;
-    /*justify-content: center;*/
     align-items: center;
-    margin: 550px 0 0 0;
+    margin: 50vh 0 10vh 0;
     padding:0 0 4px 0;
+}
 
+@media screen and (max-width: 320px) {
+    .menu__container {
+        width: 320px;
+        padding: 0;
+    }
+    .menu__link {
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .menu__link-profile {
+        margin: 0;
+        padding: 0;
+    }
+    .menu__content {
+        margin-top: 144px;
+    }
 }

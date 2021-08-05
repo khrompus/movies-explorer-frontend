@@ -82,3 +82,30 @@
     color: #000000;
     text-align: center;
 }
+
+@media screen and (max-width: 768px) {
+    .search {
+        margin: 0 30px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .search {
+        margin: 0 10px;
+    }
+
+    .search__icon {
+        display: none;
+    }
+
+    .search__input {
+        text-align: start;
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .search__submit {
+        width: 80px;
+        height: 34px;
+    }
+}

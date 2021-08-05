@@ -22,7 +22,6 @@
     flex-flow: row nowrap;
     height: 50px;
     justify-content: space-between;
-    /*border: 1px red solid;*/
     text-decoration: none;
     color: black;
     transition: .5s;
@@ -52,4 +51,44 @@
     border-top: 1px solid #E8E8E8;
     padding: 20px 0;
     margin: 20px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .portfolio {
+        padding: 0 70px;
+        margin: 90px 0 90px 0;
+    }
+
+    .portfolio__link-text {
+        font-size: 28px;
+        line-height: 50px;
+    }
+    .portfolio__link-image {
+        width: 27px;
+        height: 60px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .portfolio {
+        padding: 0 14px;
+        margin: 69px 0 70px 0;
+    }
+
+    .portfolio__link-text {
+        font-size: 18px;
+        line-height: 28px;
+        justify-content: center;
+    }
+    .portfolio__link-image {
+        width: 18px;
+        height: 28px;
+    }
+    .portfolio__title {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .portfolio__link {
+        align-items: center;
+    }
 }

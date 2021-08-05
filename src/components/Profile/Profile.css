@@ -7,6 +7,7 @@
     align-items: center;
     background-color: #fff;
 }
+
 .profile__title {
     margin-top: 74px;
     font-style: normal;
@@ -33,6 +34,7 @@
     justify-content: space-between;
     width: 100%;
 }
+
 .profile__label {
     font-style: normal;
     font-weight: 500;
@@ -45,6 +47,7 @@
     padding-bottom: 16px;
     border-bottom: 1px solid #E8E8E8;
 }
+
 .profile__label-container_margin {
     border: none;
     padding-bottom: 0;
@@ -61,6 +64,7 @@
     color: #000000;
     text-align: right;
     outline: none;
+    width: 100%;
 }
 
 .profile__button {
@@ -90,3 +94,19 @@
 }
 
 
+@media screen and (max-width: 768px) {
+    .profile__title {
+        margin-top: 236px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .profile__title {
+        margin-top: 70px;
+        font-size: 24px;
+        line-height: 29px;
+    }
+    .profile {
+        padding: 0 30px;
+    }
+}

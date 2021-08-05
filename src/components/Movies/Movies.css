@@ -31,3 +31,20 @@
 .movies__button-more:hover {
     opacity: .5;
 }
+
+@media screen and (max-width: 768px) {
+    .movies__container {
+        margin:119px 30px;
+    }
+}
+@media screen and (max-width: 320px){
+    .movies__container {
+        margin:50px 10px;
+    }
+    .movies__button-more {
+        max-width: 300px;
+        width: 100%;
+        margin: 0;
+        align-self: center;
+    }
+}
