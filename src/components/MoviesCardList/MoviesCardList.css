@@ -13,10 +13,11 @@
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 550px) {
     .card-list {
         grid-template-columns: repeat(auto-fit, minmax(min-content, 300px));
         justify-content: center;
         row-gap: 16px;
     }
 }
+

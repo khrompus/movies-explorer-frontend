@@ -76,6 +76,10 @@
     }
 }
 
+@media screen and (max-width: 550px) {
+    /*.promo {display: none}*/
+}
+
 @media screen and (max-width: 320px) {
     .promo {
         max-width: 292px;

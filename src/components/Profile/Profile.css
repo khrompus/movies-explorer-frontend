@@ -95,8 +95,14 @@
 
 
 @media screen and (max-width: 768px) {
+    .profile {
+        padding: 0 30px;
+    }
     .profile__title {
         margin-top: 236px;
+    }
+    .profile__button_red {
+        margin-bottom: 30px;
     }
 }
 
@@ -105,8 +111,5 @@
         margin-top: 70px;
         font-size: 24px;
         line-height: 29px;
-    }
-    .profile {
-        padding: 0 30px;
     }
 }

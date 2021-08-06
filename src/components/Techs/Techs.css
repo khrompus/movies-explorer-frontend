@@ -98,6 +98,42 @@
 
 }
 
+
+@media screen and (max-width: 550px) {
+    .techs {
+        /*display: none;*/
+    }
+
+    .techs {
+        padding: 0 18px;
+        height: 710px;
+    }
+
+    .techs__list {
+        padding: 0;
+        display: grid;
+        margin-top: 50px;
+        grid-template-columns: 84px 84px;
+        justify-content: center;
+        margin-right: 0;
+        gap: 10px;
+    }
+
+    .techs__list-unit {
+        font-size: 12px;
+        line-height: 15px;
+        padding: 0;
+        margin: 0;
+        width: 84px;
+        height: 57px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+}
+
+
 @media screen and (max-width: 320px) {
 
     .techs {
