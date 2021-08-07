@@ -1,0 +1,229 @@
+@import url('../../vendor/fonts/fonts.css');
+
+.project {
+    padding: 0 70px;
+    height: 608px;
+}
+
+.project__title {
+    margin: 110px 0 0 0;
+    font-family: 'Inter', Arial sans-serif;
+    font-size: 22px;
+    line-height: 27px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: -0.04em;
+    padding-bottom: 23px;
+    border-bottom: 1px #000000 solid;
+}
+
+.project__group {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.project__group-table {
+    width: 100%;
+}
+
+.project__group-title {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.04em;
+    color: #000000;
+    margin: 0;
+}
+
+.project__group-subtitle {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+    max-width: 500px;
+    width: 100%;
+    margin: 26px 0 0 0;
+}
+
+.project__time-line-first-container {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.project__time-line-second-container {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.project__time-line {
+    margin: 110px 0 0 0;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.project__time-line-first {
+    background-color: #3456F3;
+    max-width: 228px;
+    height: 36px;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.project__time-line-first-text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.project__time-line-second {
+    background-color: #F2F2F2;
+    max-width: 910px;
+    width: 100%;
+    height: 36px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.project__time-line-second-text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    margin: 0;
+}
+
+.project__time-line-first-under {
+    /*font-family: 'Suisse_Intl', Arial sans-serif;*/
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #A0A0A0;
+    max-width: 228px;
+    width: 100%;
+    text-align: center;
+    margin: 14px 0 0 0;
+}
+
+.project__time-line-second-under {
+    max-width: 910px;
+    width: 100%;
+    /*font-family: 'Suisse_Intl', Arial sans-serif;*/
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #A0A0A0;
+    text-align: center;
+    margin: 14px 0 0 0;
+}
+
+@media screen and (max-width: 768px) {
+    .project {
+        padding: 0 50px;
+        height: 585px;
+    }
+
+    .project__group-title {
+        font-size: 22px;
+        line-height: 27px;
+    }
+
+    .project__group-subtitle {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .project__group-table {
+        margin-right: 30px;
+    }
+
+    .project__group-table:last-of-type {
+        margin: 0;
+    }
+
+    .project__time-line-first {
+        max-width: 140px;
+    }
+
+    .project__time-line-first-under {
+        max-width: 140px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+   .project {
+       /*display: none;*/
+       padding: 0 18px;
+       height: 641px;
+
+   }
+}
+
+@media screen and (max-width: 320px) {
+    .project {
+        padding: 0 18px;
+        height: 641px;
+    }
+
+    .project__title {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .project__group {
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 284px;
+    }
+
+    .project__group-table:last-child {
+        margin-top: 56px;
+    }
+
+    .project__group-title {
+        font-size: 18px;
+        line-height: 22px;
+
+    }
+
+    .project__group-subtitle {
+        font-size: 11px;
+        line-height: 16px;
+    }
+
+    .project__group-table {
+        margin-right: 0;
+        margin-top: 56px;
+    }
+
+    .project__group-table:first-child {
+        margin: 0;
+    }
+
+    .project__time-line-first {
+        max-width: 100px;
+        height: 35px;
+    }
+
+    .project__time-line-first-under {
+        max-width: 100px;
+    }
+    .project__time-line {
+        margin-top: 60px;
+    }
+}
