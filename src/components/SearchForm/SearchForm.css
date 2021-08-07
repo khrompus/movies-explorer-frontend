@@ -30,6 +30,11 @@
     text-align: center;
     outline: none;
     width: 100%;
+    transition: .3s;
+    border-radius: 40px;
+}
+.search__input:focus {
+    background-color: #F4F4F4;
 }
 
 .search__submit {
@@ -46,6 +51,7 @@
     color: #FFFFFF;
     transition: .5s;
     cursor: pointer;
+    outline: none;
 }
 
 .search__submit:hover {

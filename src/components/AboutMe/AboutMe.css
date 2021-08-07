@@ -52,6 +52,7 @@
 .aboutMe__content {
     display: flex;
     flex-direction: column;
+    margin-right: 49px;
 }
 
 .aboutMe__links {
@@ -90,6 +91,8 @@
     .aboutMe {
         padding: 0 50px;
     }
+
+
 
     .aboutMe__subtitle {
         font-size: 40px;
@@ -197,6 +200,7 @@
     .aboutMe__content {
         order: 2;
         /*margin-top: 60px;*/
+        margin-right: 0;
     }
 
     .aboutMe__container {
