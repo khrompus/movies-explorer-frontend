@@ -1,4 +1,4 @@
-const baseUrl = 'http://khrompus-diploma-api.nomoredomains.club'
+const baseUrl = 'https://khrompus-diploma-api.nomoredomains.club'
 // const baseUrl = 'http://localhost:3001' dev
 const movieUrl = 'https://api.nomoreparties.co'
 const desktopWidth = 1280;
