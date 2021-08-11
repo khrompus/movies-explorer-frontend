@@ -2,6 +2,11 @@
     margin: 119px 70px;
 }
 
+.text-nothing-found {
+    margin: auto;
+    text-align: center;
+}
+
 @media screen and (max-width: 768px) {
     .saved-movies__container{
         margin: 119px 30px;

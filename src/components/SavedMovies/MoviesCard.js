@@ -1,7 +1,5 @@
 import React from 'react'
-import './MoviesCard.css'
-import {movieUrl} from "../../utils/constants";
-import {Route} from 'react-router-dom'
+import '../MoviesCard/MoviesCard.css'
 
 function MoviesCard({card, toggleLikeHandler, movieAdded}) {
     let added = movieAdded(card);
@@ -12,6 +10,7 @@ function MoviesCard({card, toggleLikeHandler, movieAdded}) {
         toggleLikeHandler(card, !added);
     };
 
+
     function timeHandler(data) {
         let hour = Math.trunc(data / 60);
         let minut = data % 60;
@@ -21,7 +20,6 @@ function MoviesCard({card, toggleLikeHandler, movieAdded}) {
     return (
 
         <>
-            <Route path='/movies'>
                 <div className='card'>
                     <div className='card__content'>
                         <div className='card__container-text'>
@@ -29,15 +27,14 @@ function MoviesCard({card, toggleLikeHandler, movieAdded}) {
                             <p className='card__subtitle'>{timeHandler(card.duration)}</p>
                         </div>
                         <button onClick={deleteSaveClick} type='button' className={added ?
-                            'card__save card__save_active'
-                            : 'card__save'
+                            'card__save-saved'
+                            : 'card__save-saved'
                         }/>
                     </div>
                     <a href={card.trailerLink} rel='noreferrer' target='_blank'>
-                        <img className='card__image' src={`${movieUrl}` + card.image.url} alt="Обложка"/>
+                        <img className='card__image' src={card.image} alt="Обложка"/>
                     </a>
                 </div>
-            </Route>
         </>
 
 
