@@ -76,7 +76,6 @@ function App() {
     function handleLogin(email, password) {
         setPreloaderAuth(true);
         login(email, password).then((res) => {
-            console.log(res)
             localStorage.setItem("token", res.token);
             localStorage.setItem("loggedIn", true);
             setLoggedIn(true);
@@ -147,9 +146,7 @@ function App() {
                     setMovies(allMovies);
                     const currentUserSavedMovies = saveMovies.filter((m) => {
                         return m.owner._id === currentUser._id;
-
                     });
-                    console.log(currentUser)
                     setSavedMovies(currentUserSavedMovies);
                 })
                 .catch((err) => console.log(err))
@@ -159,7 +156,6 @@ function App() {
         }
     }, [loggedIn, currentUser._id]);
 
-// console.log(savedMovies)
 
     const handleSaveMovie = (movie) => {
         saveMovie(movie)
@@ -181,11 +177,13 @@ function App() {
 
         deleteMovie(movieId)
             .then((res) => {
-                if (res.message === "Фильм удалён") {
+                if (res.message === "Фильм удалён!") {
+
                     const newArray = savedMovies.filter((item) => {
                         return item._id !== movieId;
                     });
                     setSavedMovies([...newArray]);
+
                 }
             })
             .catch((err) => {

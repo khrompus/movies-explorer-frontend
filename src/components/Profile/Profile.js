@@ -48,6 +48,11 @@ function Profile(props) {
         } else {
             setNameError("");
         }
+        if (currentUser.name === name){
+            setFormValid(false)
+        }else{
+            setFormValid(true)
+        }
     };
 
 

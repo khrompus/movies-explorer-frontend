@@ -69,7 +69,7 @@ function MoviesCardList({foundMovies, preloader, toggleLikeHandler, savedMovies,
                                     return (
                                         <MoviesCard
                                             card={item}
-                                            key={item._id}
+                                            key={item.id}
                                             toggleLikeHandler={toggleLikeHandler}
                                             savedMovies={savedMovies}
                                             movieAdded={movieAdded}

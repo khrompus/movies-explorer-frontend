@@ -28,7 +28,7 @@ function MoviesCard({card, toggleLikeHandler, movieAdded}) {
                         </div>
                         <button onClick={deleteSaveClick}  type='button' className='card__save-saved'/>
                     </div>
-                    <a href={card.trailerLink} rel='noreferrer' target='_blank'>
+                    <a href={card.trailer} rel='noreferrer' target='_blank'>
                         <img className='card__image' src={card.image} alt="Обложка"/>
                     </a>
                 </div>
