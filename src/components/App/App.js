@@ -134,34 +134,32 @@ function App() {
             });
     }
 
-
     useEffect(() => {
         setPreloader(true);
         if (loggedIn) {
             Promise.all([
-                getUser(),
-                getMovies(),
+             getUser(),
+             getMovies(),
+             getSavedMovies(),
             ])
-                .then(([userInf, allMovies]) => {
+                .then(([userInf, allMovies, saveMovies]) => {
                     setCurrentUser(userInf);
                     setMovies(allMovies);
+                    const currentUserSavedMovies = saveMovies.filter((m) => {
+                        return m.owner._id === currentUser._id;
+
+                    });
+                    console.log(currentUser)
+                    setSavedMovies(currentUserSavedMovies);
                 })
                 .catch((err) => console.log(err))
                 .finally(() => {
                     setPreloader(false);
                 });
         }
-    }, [loggedIn, currentUser._id,]);
+    }, [loggedIn, currentUser._id]);
 
-    // useEffect(() => {
-    //     getSavedMovies()
-    //         .then((res) => {
-    //             const currentUserSavedMovies = res.filter((m) => {
-    //                 return m.owner._id === currentUser._id
-    //             })
-    //             setSavedMovies(currentUserSavedMovies)
-    //         })
-    // }, [loggedIn,])
+// console.log(savedMovies)
 
     const handleSaveMovie = (movie) => {
         saveMovie(movie)
@@ -172,6 +170,7 @@ function App() {
                 console.log(err);
             });
     };
+
 
     const handleDeleteMovie = (movie) => {
         const movieId = movie._id
@@ -232,7 +231,6 @@ function App() {
 
     useEffect(() => {
         const allMoviesArray = JSON.parse(localStorage.getItem("allMovies"));
-
         setPresenceFilms(true);
         if (allMoviesArray) {
             setFoundMovies(allMoviesArray);

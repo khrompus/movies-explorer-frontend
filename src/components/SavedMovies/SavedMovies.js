@@ -3,15 +3,14 @@ import './SavedMovies.css'
 import MoviesCardList from "./MoviesCardList";
 import SearchForm from "../SearchForm/SearchForm";
 import { durationMovie } from "../../utils/constants";
-import {getSavedMovies} from "../../utils/MainApi";
-function SavedMovies({ toggleLikeHandler, movieAdded, savedMovies, }) {
+function SavedMovies({ toggleLikeHandler, movieAdded, savedMovies}) {
     const [showFoundMovies, setShowFoundMovies] = useState([]);
     const [preloader, setPreloader] = useState(false);
 
     useEffect(() => {
         setShowFoundMovies(savedMovies);
-    }, [showFoundMovies]);
-
+    }, [savedMovies]);
+// console.log(savedMovies)
     const [filter, setfilter] = useState(false);
     const filterMovies = (movies) =>
         movies.filter((item) => item.duration < durationMovie);

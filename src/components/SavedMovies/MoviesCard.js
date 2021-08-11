@@ -26,10 +26,7 @@ function MoviesCard({card, toggleLikeHandler, movieAdded}) {
                             <h2 className='card__title'>{card.nameRU}</h2>
                             <p className='card__subtitle'>{timeHandler(card.duration)}</p>
                         </div>
-                        <button onClick={deleteSaveClick} type='button' className={added ?
-                            'card__save-saved'
-                            : 'card__save-saved'
-                        }/>
+                        <button onClick={deleteSaveClick}  type='button' className='card__save-saved'/>
                     </div>
                     <a href={card.trailerLink} rel='noreferrer' target='_blank'>
                         <img className='card__image' src={card.image} alt="Обложка"/>
