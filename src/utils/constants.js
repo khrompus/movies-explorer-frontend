@@ -1,5 +1,5 @@
 const baseUrl = 'https://khrompus-diploma-api.nomoredomains.club'
-// const baseUrl = 'http://localhost:3001' dev
+// const baseUrl = 'http://localhost:3001'
 const movieUrl = 'https://api.nomoreparties.co'
 const desktopWidth = 1280;
 const tabletWidth = 780;

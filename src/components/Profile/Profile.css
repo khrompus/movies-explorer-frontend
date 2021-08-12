@@ -95,6 +95,16 @@
     color: #EE3465;
     margin-top: 10px;
 }
+
+.profile__form-successful {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 12px;
+    color: #47dc56;
+    margin-top: 30px;
+}
+
 .profile__button:hover {
     opacity: .5;
 }

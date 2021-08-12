@@ -107,6 +107,7 @@ function Profile(props) {
             </div>
             {(emailError && emailDirty)  && <span className='profile__form-error'>{emailError}</span>}
             {props.error && (<span id='submit-error' className='profile__form-error'>При обновлении профиля произошла ошибка.</span>)}
+            {props.profileSuccessful && (<span className='profile__form-successful'>Ваш профиль был успешно изменен.</span>)}
             <button disabled={!formValid} type='submit' className='profile__button'>Редактировать</button>
         </form>
 

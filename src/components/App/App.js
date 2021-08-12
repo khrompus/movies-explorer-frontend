@@ -14,7 +14,7 @@ import {CurrentUserContext} from "../../context/CurrentUserContext";
 import './App.css';
 import Header from '../Header/Header'
 import Main from "../Main/Main";
-import {Route, Switch, useHistory, useLocation} from 'react-router-dom';
+import {Route, Switch, Redirect, useHistory, useLocation} from 'react-router-dom';
 import {useState, useEffect} from 'react'
 import Footer from "../Footer/Footer";
 import Profile from "../Profile/Profile";
@@ -41,6 +41,7 @@ function App() {
     const [savedMovies, setSavedMovies] = useState([]);
     const [presenceFilms, setPresenceFilms] = useState(false);
     const [foundMovies, setFoundMovies] = useState([]);
+    const [profileSuccessful, setProfileSuccessful] = useState(false)
     const history = useHistory();
     const location = useLocation();
 
@@ -101,10 +102,12 @@ function App() {
                 setPreloader(true);
                 setErrorProfile(false);
                 setCurrentUser(res);
+                setProfileSuccessful(true)
             })
             .catch((err) => {
                 setErrorProfile(true);
                 console.log(err);
+                setProfileSuccessful(false)
             })
             .finally(() => {
                 setTimeout(() => {
@@ -286,11 +289,12 @@ function App() {
                         path='/saved-movies'
                         component={SavedMovies}
                     />
-                    <ProtectedRoute loader={preloader} handleUpdateProfile={handleUpdateProfile} error={errorProfile}
+                    <ProtectedRoute profileSuccessful={profileSuccessful} loader={preloader} handleUpdateProfile={handleUpdateProfile} error={errorProfile}
                                     loggedIn={loggedIn} path='/profile' component={Profile} onSignOut={handleSignOut}/>
-                    <Route path='*'>
-                        <PageNotFound/>
+                    <Route path='/404'>
+                        <PageNotFound />
                     </Route>
+                    <Redirect to='/404' />
                 </Switch>
                 <Route exact path={["/", "/movies", "/saved-movies"]}>
                     <Footer/>
