@@ -58,6 +58,17 @@
     cursor: pointer;
 }
 
+.card__save-saved {
+    border: none;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-image: url("../../image/delete.png");
+}
+
 .card__delete {
     border: none;
     background-color: #fff;
@@ -75,6 +86,7 @@
 
 .card__image {
     width: 364px;
+    height: 203px;
 }
 
 @media screen and (max-width: 768px) {
@@ -85,6 +97,7 @@
 
     .card__image {
         width: 339px;
+        height: 190px;
     }
 }
 
@@ -96,5 +109,6 @@
 
     .card__image {
         width: 300px;
+        height: 168px;
     }
 }

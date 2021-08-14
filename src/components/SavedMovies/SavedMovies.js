@@ -1,45 +1,59 @@
-import React from 'react'
+import React, {useState,useEffect} from 'react'
 import './SavedMovies.css'
-import MoviesCardList from "../MoviesCardList/MoviesCardList";
+import MoviesCardList from "./MoviesCardList";
 import SearchForm from "../SearchForm/SearchForm";
-function SavedMovies() {
+import { durationMovie } from "../../utils/constants";
+function SavedMovies({ toggleLikeHandler, movieAdded, savedMovies}) {
+    const [showFoundMovies, setShowFoundMovies] = useState([]);
+    const [preloader, setPreloader] = useState(false);
+
+    useEffect(() => {
+        setShowFoundMovies(savedMovies);
+    }, [savedMovies]);
+// console.log(savedMovies)
+    const [filter, setfilter] = useState(false);
+    const filterMovies = (movies) =>
+        movies.filter((item) => item.duration < durationMovie);
+
+    const onFilter = () => {
+        setfilter(!filter);
+    };
+
+    function handleSearchMovies(data) {
+        setPreloader(true);
+        const filteredArray = savedMovies.filter((obj) => {
+            return (
+                obj.description?.toLowerCase().includes(data.toLowerCase()) ||
+                obj.director?.toLowerCase().includes(data.toLowerCase()) ||
+                obj.nameEN?.toLowerCase().includes(data.toLowerCase()) ||
+                obj.nameRU?.toLowerCase().includes(data.toLowerCase())
+            );
+        });
+
+        setShowFoundMovies(filteredArray);
+
+        setTimeout(() => {
+            setPreloader(false);
+        }, 300);
+    }
+
 
  return(
-     // Временное решние , на 4 этапе будет сделано через MovieCardList
      <section className='saved-movies'>
-        <SearchForm/>
+        <SearchForm onSearch={handleSearchMovies} filter={filter} onFilter={onFilter}/>
         <div className='saved-movies__container'>
-            <MoviesCardList/>
-            {/*<div className='card'>*/}
-            {/*    <div className='card__content'>*/}
-            {/*        <div className='card__container-text'>*/}
-            {/*            <h2 className='card__title'>33 слова о дизайне</h2>*/}
-            {/*            <p className='card__subtitle'>1ч 47м</p>*/}
-            {/*        </div>*/}
-            {/*        <button onClick={handleSaveCard} type='button' className='card__save'/>*/}
-            {/*    </div>*/}
-            {/*    <img className='card__image' src={pic} alt="Обложка"/>*/}
-            {/*</div>*/}
-            {/*<div className='card'>*/}
-            {/*    <div className='card__content'>*/}
-            {/*        <div className='card__container-text'>*/}
-            {/*            <h2 className='card__title'>33 слова о дизайне</h2>*/}
-            {/*            <p className='card__subtitle'>1ч 47м</p>*/}
-            {/*        </div>*/}
-            {/*        <button onClick={handleSaveCard} type='button' className='card__save'/>*/}
-            {/*    </div>*/}
-            {/*    <img className='card__image' src={pic} alt="Обложка"/>*/}
-            {/*</div>*/}
-            {/*<div className='card'>*/}
-            {/*    <div className='card__content'>*/}
-            {/*        <div className='card__container-text'>*/}
-            {/*            <h2 className='card__title'>33 слова о дизайне</h2>*/}
-            {/*            <p className='card__subtitle'>1ч 47м</p>*/}
-            {/*        </div>*/}
-            {/*        <button onClick={handleSaveCard} type='button' className='card__save'/>*/}
-            {/*    </div>*/}
-            {/*    <img className='card__image' src={pic} alt="Обложка"/>*/}
-            {/*</div>*/}
+            {savedMovies.length !== 0 || showFoundMovies.length !== 0 ? (
+                <MoviesCardList
+                    movieAdded={movieAdded}
+                    preloader={preloader}
+                    showFoundMovies={
+                        filter ? filterMovies(showFoundMovies) : showFoundMovies
+                    }
+                    toggleLikeHandler={toggleLikeHandler}
+                />
+            ) : (
+                <h3 className='text-nothing-found'>Ничего не найдено</h3>
+            )}
         </div>
      </section>
  )
